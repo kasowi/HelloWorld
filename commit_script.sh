@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the phrase to spell out
-PHRASE="hello world"
+PHRASE="HELLO WORLD"
 
 # Get the current date
 CURRENT_DATE=$(date +"%Y-%m-%d")
