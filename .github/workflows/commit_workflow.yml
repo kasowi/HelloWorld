@@ -1,0 +1,21 @@
+name: Auto Commits
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Run Commit Script
+      run: ./commit_script.sh
+
+    - name: Push Changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
